@@ -1,0 +1,1036 @@
+{
+	"info": {
+		"_postman_id": "facb1055-41cc-445b-a19c-c40e48021be4",
+		"name": "Agencia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34021514"
+	},
+	"item": [
+		{
+			"name": "hotel",
+			"item": [
+				{
+					"name": "crearHotel",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "hackaboss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\": \"H002\",\r\n    \"nombre\": \"Hotel Ejemplo2\",\r\n    \"ciudad\": \"Ciudad Ejemplo2\",\r\n    \"habitaciones\": []\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/agency/hotels/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotels",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "traerHoteles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agency/hotels",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotels"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "traerHotelId",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "editarHotel",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "hackaboss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\": \"H002\",\r\n    \"nombre\": \"Hotel Viejo\",\r\n    \"ciudad\": \"Ciudad Madrid\",\r\n    \"habitaciones\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/agency/hotels/edit/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotels",
+								"edit",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrarHotel",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "hackaboss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agency/hotels/delete/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotels",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "persona",
+			"item": [
+				{
+					"name": "createPersona",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "hackaboss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Daniel\",\r\n    \"apellido\": \"Ramirez\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/agency/personas/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"personas",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editarPersona",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "hackaboss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Alfonso\",\r\n    \"apellido\": \"Gonzalez\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/agency/personas/edit/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"personas",
+								"edit",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "traerPersonas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agency/personas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "traerPersonaId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agency/personas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"personas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrarPersona",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "hackaboss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agency/personas/delete/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"personas",
+								"delete",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "habitacion",
+			"item": [
+				{
+					"name": "crearHabitacion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codigo\": \"HAB001\",\r\n  \"tipo\": \"Doble\",\r\n  \"precioPorNoche\": 100.0,\r\n  \"ciudad\": \"Ciudad Ejemplo\",\r\n  \"disponibleDesde\": \"2024-05-05\",\r\n  \"disponibleHasta\": \"2024-05-10\",\r\n  \"reservado\": false,\r\n  \"hotel\": {\r\n    \"id\": 1,\r\n    \"codigo\": \"HOT001\",\r\n    \"nombre\": \"Hotel Ejemplo\",\r\n    \"ciudad\": \"Ciudad Ejemplo\"\r\n  },\r\n  \"reservas\": []\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/agency/rooms",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"rooms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "traerHabitaciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agency/rooms?dateFrom=05/05/2024&dateTo=10/05/2024&destination=Barcelona",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"rooms"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "05/05/2024"
+								},
+								{
+									"key": "dateTo",
+									"value": "10/05/2024"
+								},
+								{
+									"key": "destination",
+									"value": "Barcelona"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "traerHabitacionId",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "editarHabitacion",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "hackaboss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"codigo\": \"HAB001\",\r\n    \"tipo\": \"Doble\",\r\n    \"precioPorNoche\": 100.0,\r\n    \"ciudad\": \"Barcelona\",\r\n    \"disponibleDesde\": \"2024-05-05\",\r\n    \"disponibleHasta\": \"2024-05-10\",\r\n    \"reservado\": false,\r\n    \"hotel\": {\r\n        \"id\": 1,\r\n        \"codigo\": \"H001\",\r\n        \"nombre\": \"Hotel Nuevo\",\r\n        \"ciudad\": \"Ciudad Barcelona\"\r\n    },\r\n    \"reservas\": []\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/agency/rooms/edit/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"rooms",
+								"edit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrarHabitacion",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "hackaboss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agency/rooms/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"rooms",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "vuelo",
+			"item": [
+				{
+					"name": "crearVuelo",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"numeroVuelo\": \"ABC123\",\r\n  \"origen\": \"Ciudad Origen\",\r\n  \"destino\": \"Ciudad Destino\",\r\n  \"tipoAsiento\": \"Primera Clase\",\r\n  \"precioPorPersona\": 500.0,\r\n  \"fechaIda\": \"2024-05-01\",\r\n  \"asientosDisponibles\": 100,\r\n  \"reservado\": false\r\n}\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/agency/flights",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flights"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "traerVuelos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agency/flights",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flights"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "traerVueloId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agency/flights/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flights",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editarVuelo",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "hackaboss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"numeroVuelo\": \"ABC123\",\r\n  \"origen\": \"Madrid\",\r\n  \"destino\": \"Barcelona\",\r\n  \"tipoAsiento\": \"Primera Clase\",\r\n  \"precioPorPersona\": 500.0,\r\n  \"fechaIda\": \"2024-05-01\",\r\n  \"asientosDisponibles\": 100,\r\n  \"reservado\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/agency/flights/edit/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flights",
+								"edit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrarVuelo",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "hackaboss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agency/flights/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flights",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reserva",
+			"item": [
+				{
+					"name": "crearReserva",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "hackaboss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fechaInicio\": \"2024-05-01\",\r\n  \"fechaFin\": \"2024-05-05\",\r\n  \"nombreCliente\": \"Juan Pérez\",\r\n  \"cantidadPersonas\": 2,\r\n  \"montoTotal\": 500.0,\r\n  \"tipoHabitacion\": \"Doble\",\r\n  \"codigoHotel\": \"H001\",\r\n  \"vuelo\": {\r\n    \"id\": 1\r\n  },\r\n  \"habitacion\": {\r\n    \"id\": 1\r\n  },\r\n  \"pasajeros\": [\r\n    {\"id\": 1},\r\n    {\"id\": 2}\r\n  ]\r\n}\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/agency/reservas/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"reservas",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "traerReservas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agency/reservas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"reservas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "traerReservaId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agency/reservas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"reservas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editarReserva",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "hackaboss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agency/reservas/edit/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"reservas",
+								"edit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrarReserva",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "hackaboss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agency/reservas/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"reservas",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "userStory",
+			"item": [
+				{
+					"name": "userStory2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agency/rooms/available?dateFrom=25/05/2024&dateTo=30/05/2024&destination=Barcelona",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"rooms",
+								"available"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "25/05/2024"
+								},
+								{
+									"key": "dateTo",
+									"value": "30/05/2024"
+								},
+								{
+									"key": "destination",
+									"value": "Barcelona"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userStory4",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agency/flights",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flights"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userStory1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agency/hotels",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotels"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userStory3",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "hackaboss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fechaInicio\": \"2024-05-06\",\r\n    \"fechaFin\": \"2024-05-09\",\r\n    \"nombreCliente\": \"Juan Pérez\",\r\n    \"cantidadPersonas\": 2,\r\n    \"montoTotal\": 500.0,\r\n    \"tipoHabitacion\": \"Doble\",\r\n    \"codigoHotel\": \"HAB001\",\r\n    \"vuelo\": {\r\n        \"id\": 1,\r\n        \"numeroVuelo\": \"ABC123\",\r\n        \"origen\": \"Madrid\",\r\n        \"destino\": \"Barcelona\",\r\n        \"tipoAsiento\": \"Primera Clase\",\r\n        \"precioPorPersona\": 500.0,\r\n        \"fechaIda\": \"2024-05-01\",\r\n        \"asientosDisponibles\": 100,\r\n        \"reservado\": false,\r\n        \"reservas\": [2]\r\n    },\r\n    \"habitacion\": {\r\n        \"id\": 1,\r\n        \"codigo\": \"HAB001\",\r\n        \"tipo\": \"Doble\",\r\n        \"precioPorNoche\": 100.0,\r\n        \"ciudad\": \"Barcelona\",\r\n        \"disponibleDesde\": \"2024-05-05\",\r\n        \"disponibleHasta\": \"2024-05-10\",\r\n        \"reservado\": false,\r\n        \"hotel\": {\r\n            \"id\": 1,\r\n            \"codigo\": \"H001\",\r\n            \"nombre\": \"Hotel Nuevo\",\r\n            \"ciudad\": \"Ciudad Barcelona\"\r\n        },\r\n        \"reservas\": [2]\r\n    },\r\n    \"pasajeros\": [\r\n        {\r\n            \"nombre\": \"Juan\",\r\n            \"apellido\": \"Perez\"\r\n        },\r\n        {\r\n            \"nombre\": \"Alfonso\",\r\n            \"apellido\": \"Gonzalez\"\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/agency/rooms/room-booking/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"rooms",
+								"room-booking",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userStory5",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agency/flights/availableFlights?dateFrom=01/05/2024&origin=Madrid&destination=Barcelona",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flights",
+								"availableFlights"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "01/05/2024"
+								},
+								{
+									"key": "origin",
+									"value": "Madrid"
+								},
+								{
+									"key": "destination",
+									"value": "Barcelona"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userStory6",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "hackaboss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fechaInicio\": \"2024-05-06\",\r\n    \"fechaFin\": \"2024-05-09\",\r\n    \"nombreCliente\": \"Juan Pérez\",\r\n    \"cantidadPersonas\": 2,\r\n    \"montoTotal\": 500.0,\r\n    \"tipoHabitacion\": \"Doble\",\r\n    \"codigoHotel\": \"HAB001\",\r\n    \"vuelo\": {\r\n        \"id\": 1,\r\n        \"numeroVuelo\": \"ABC123\",\r\n        \"origen\": \"Madrid\",\r\n        \"destino\": \"Barcelona\",\r\n        \"tipoAsiento\": \"Primera Clase\",\r\n        \"precioPorPersona\": 500.0,\r\n        \"fechaIda\": \"2024-05-01\",\r\n        \"asientosDisponibles\": 100,\r\n        \"reservado\": false,\r\n        \"reservas\": [2]\r\n    },\r\n    \"habitacion\": {\r\n        \"id\": 1,\r\n        \"codigo\": \"HAB001\",\r\n        \"tipo\": \"Doble\",\r\n        \"precioPorNoche\": 100.0,\r\n        \"ciudad\": \"Barcelona\",\r\n        \"disponibleDesde\": \"2024-05-05\",\r\n        \"disponibleHasta\": \"2024-05-10\",\r\n        \"reservado\": false,\r\n        \"hotel\": {\r\n            \"id\": 1,\r\n            \"codigo\": \"H001\",\r\n            \"nombre\": \"Hotel Nuevo\",\r\n            \"ciudad\": \"Ciudad Barcelona\"\r\n        },\r\n        \"reservas\": [2]\r\n    },\r\n    \"pasajeros\": [\r\n        {\r\n            \"nombre\": \"Juan\",\r\n            \"apellido\": \"Perez\"\r\n        },\r\n        {\r\n            \"nombre\": \"Alfonso\",\r\n            \"apellido\": \"Gonzalez\"\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/agency/rooms/room-booking/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"rooms",
+								"room-booking",
+								"new"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
